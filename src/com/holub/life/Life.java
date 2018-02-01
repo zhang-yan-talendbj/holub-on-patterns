@@ -1,8 +1,9 @@
 package com.holub.life;
 
-import java.awt.*;
-import javax.swing.*;
 import com.holub.ui.MenuSite;
+
+import javax.swing.*;
+import java.awt.*;
 
 /*******************************************************************
  * An implemenation of Conway's Game of Life.
@@ -28,7 +29,8 @@ public final class Life extends JFrame
 
 		setDefaultCloseOperation	( EXIT_ON_CLOSE 		);
 		getContentPane().setLayout	( new BorderLayout()	);
-		getContentPane().add( Universe.instance(), BorderLayout.CENTER); //{=life.java.install}
+		Universe universe = Universe.instance();
+		getContentPane().add(universe, BorderLayout.CENTER); //{=life.java.install}
 
 		pack();
 		setVisible( true );

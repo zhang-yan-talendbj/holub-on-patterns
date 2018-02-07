@@ -66,11 +66,17 @@ class ProtoClock implements MenuContributor {
         ActionListener handler = new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                String name = ((JMenuItem)e.getSource()).getName();
+                String name = ((JMenuItem) e.getSource()).getName();
                 switch (name.charAt(0)) {
-                    case 'h': setClockSpeed(0);break;
-                    case 'f': setClockSpeed(500);break;
-                    case 's': setClockSpeed(250);break;
+                    case 'h':
+                        setClockSpeed(0);
+                        break;
+                    case 'f':
+                        setClockSpeed(500);
+                        break;
+                    case 's':
+                        setClockSpeed(250);
+                        break;
                 }
             }
         };
@@ -92,7 +98,6 @@ class ProtoClock implements MenuContributor {
         System.out.println("Changing speed to " + speed);
     }
 }
-
 
 
 class ProtoUniverse extends JPanel implements Cell, MenuContributor {
@@ -160,4 +165,5 @@ class ProtoUniverse extends JPanel implements Cell, MenuContributor {
 }
 
 
-interface Cell {} // Stub
+interface Cell {
+} // Stub
